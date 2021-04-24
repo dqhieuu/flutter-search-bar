@@ -159,11 +159,12 @@ class SearchBar {
           decoration: InputDecoration(
               hintText: hintText,
               hintStyle: inBar
-                  ? Theme.of(context)
-                      .primaryTextTheme
-                      .bodyText1
-                      .color
-                      .withOpacity(0.7)
+                  ? TextStyle(
+                      color: Theme.of(context)
+                          .primaryTextTheme
+                          .bodyText1
+                          .color
+                          .withOpacity(0.7))
                   : TextStyle(
                       color: theme.textTheme.headline4.color,
                     ),
