@@ -154,10 +154,16 @@ class SearchBar {
         child: TextField(
           key: Key('SearchBarTextField'),
           keyboardType: keyboardType,
+          style: TextStyle(
+              color: Theme.of(context).primaryTextTheme.headline6.color),
           decoration: InputDecoration(
               hintText: hintText,
               hintStyle: inBar
-                  ? null
+                  ? Theme.of(context)
+                      .primaryTextTheme
+                      .bodyText1
+                      .color
+                      .withOpacity(0.7)
                   : TextStyle(
                       color: theme.textTheme.headline4.color,
                     ),
